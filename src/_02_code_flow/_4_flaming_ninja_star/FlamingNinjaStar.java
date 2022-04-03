@@ -20,25 +20,27 @@ rob.setWindowSize(800, 800);
 		//         Set its start value to zero.
 		int countLoop = 0;
 	       //  LOOP. Start a while loop to repeat all of the code below ONE time (we will change this later)
-		while ( count <1 ) {
+		while   ( countLoop <25 ) {
 			   // TURN RIGHT     Turn the robot 1/8 of a circle (hint: 360 degrees will turn a full circle)
-		
+	rob.turn(45);
 			   // MOVE           Move the robot 64 pixels
-
+rob.move(64);
 			   // TURN LEFT      Turn the robot 40 degrees to the LEFT. (Negative numbers will turn the robot counter-clockwise.)
-			
+			rob.turn(-40);
 			   // DRAW FLAME     Move the robot the distance in the variable flameSize
-			
+rob.setPenColor(250,8,6);
+			rob.move(flameSize);
 				//               Turn the robot 170 degrees
-			
+			rob.turn(170);
 				//               Move the robot the distance in the variable flameSize (again)
-			
-			   // TURN RIGHT     Turn the robot 64 degrees to the right
-			
+			rob.move(flameSize);
+rob.setPenColor(0,0,0);
+			// TURN RIGHT     Turn the robot 64 degrees to the right
+			rob.turn(64);
 				// MOVE         Move the robot the distance in the variable baseSize
-		
+	   rob.move(baseSize);
 				//  INCREASE COUNT. Increase the count by 1
-		
+	   countLoop+=1;
 		//  End the while loop here
 		
 		// TEST   Run the program. Check that your shape is the same as the first picture in the recipe. 
@@ -51,3 +53,7 @@ rob.setWindowSize(800, 800);
 		
 	}
 }
+
+} 
+		
+	
