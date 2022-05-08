@@ -9,8 +9,8 @@
 // This line of code creates a variable to hold your faccate picture
 // You will use it later.
 PImage cat;
-int x=0;
-int y=0;
+int x= 303;
+int y= 318;
 
 void setup() {
   
@@ -39,8 +39,7 @@ void draw() {
 //    The x,y position of the eye will be printed at the bottom of your processing window. 
 //    Variables for x and y have been created at the top of your sketch, 
 //    now you can set them equal to the values you just found.
-x = 303 ;
-y = 318 ;
+
 // 8. DRAW CIRCLES.
 //     The circles will have black lines around them by default. Put noStroke(); here to remove them.
        noStroke();
@@ -52,16 +51,21 @@ y = 318 ;
 //    Use the x and y variables you just created to place the ellipse in the correct location.
 //                  The ellipse command looks like this:
                 ellipse(x, y, 78, 64);
+                ellipse(x + 165, y + 30, 78, 64 );
 // Run the program to make sure it is in the right place and is the right size.
 }
 
 // 11.  LASER BEAM.  This code will make your ellipse move down and to the right when you press 
 //      the space bar. Run the program to test it.
 //      If you want it to move to the left, change to x-1=.
-void keyPressed() {
+void keyPressed() {   
     x+=1;
     y+=1;
-    
+if (y > height) {  
+  x = 303 ;
+  y = 318 ;
+  background(cat);
+}
 // 12.  If you want them to go faster, add more than one each time the key is pressed    
 }
  
@@ -70,7 +74,7 @@ void keyPressed() {
 //      You will need to click the mouse on the other eye to figure our where to draw the other circle
 //      Use offsets from the other eye so that you don’t need to make a second set of coordinates.
 //      e.g. ellipse(x+220, y-50, 50, 50);
-
+        
 //14.  Set the laser back to the beginning when it goes off the screen.
 //     You will need  an if statement to check when x > width 
 //     Then set x and y back to their original values and re-draw the cat
