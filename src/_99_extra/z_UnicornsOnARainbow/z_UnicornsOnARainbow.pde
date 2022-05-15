@@ -19,10 +19,11 @@ void setup() {
 rainbow = loadImage("rainbow.jpg");
   
 // 3. Set the size of the sketch. Make it big enough to show the rainbow you chose.
-
+size (600, 800); 
 // 4. Resize the rainbow so it is the same size as the sketch
-
+rainbow.resize (600, 800);
 // 5. Drag and drop an image with a unicorn onto this sketch. 
+
 //    Try to find one with a transparent background. Use the same idea as in step 1.
 //    Make sure the file name is correct for the unicorn image you saved.  
 unicorn = loadImage("unicorn.png");
