@@ -16,15 +16,21 @@ public class QuizGame {
 				if (question.equals("two") ) {
 					score = score + 1 ;
 				}
+				else  {
+					score = score - 1;
+				}
 				// 4.  if the user's answer was correct, add one to their score 
 		
 		// MAKE MORE QUESTIONS. Ask more questions by repeating the above 
 				// Option: Subtract a point from their score for a wrong answer
 				question = JOptionPane.showInputDialog("How many hours are in one day?");
-		  if (question.equals("15") ) {
-			  score = score - 1 ;
+		  if (question.equals("24") ) {
+			  score = score + 1 ;
+		  }
+		  else {
+			  score = score - 1;
 		  }
 		// After all the questions have been asked, tell the user their final score 
-		  JOptionPane.showMessageDialog(null, "You score is 0");
+		  JOptionPane.showMessageDialog(null, "You score is " + score );
 	}
 }

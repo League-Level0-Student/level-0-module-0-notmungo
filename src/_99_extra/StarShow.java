@@ -36,7 +36,7 @@ public class StarShow {
 		// LOOP: Start a while loop to repeat the following code until 7 stars have been drawn
            while(starCount <7) ;
 			// Set the pen width to the number of stars drawn so far
-               pen
+               
 			// Set the X position of the robot to your X variable
 
 			// Set the Y position of the robot to your Y variable
